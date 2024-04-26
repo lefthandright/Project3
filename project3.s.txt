@@ -110,3 +110,9 @@ end_B:
   lw $ra, 0($sp)     # Restore return address
   addi $sp, $sp, 4   # Restore stack pointer
   jr $ra             # Return to caller
+
+print_NA:
+  li $v0, 4
+  la $a0, NA_MESSAGE
+  syscall
+  jr $ra
