@@ -30,3 +30,11 @@ main:
   # Exit program
   li $v0, 10
   syscall
+
+# Subprogram A
+subprogram_A:
+  addi $sp, $sp, -4   # Allocate space for return address
+  sw $ra, 0($sp)      # Save return address
+
+  move $s0, $a0       # Save address of string
+  move $t0, $a0       # Pointer to beginning of string
