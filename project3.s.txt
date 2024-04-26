@@ -97,3 +97,10 @@ is_digit:
   beq $t5, $zero, add_to_odd
   add $t2, $t2, $t1  # Add to even sum
   j next_char
+
+add_to_odd:
+  add $t3, $t3, $t1  # Add to odd sum
+
+next_char:
+  addi $t0, $t0, 1   # Move to next character
+  j loop_B
