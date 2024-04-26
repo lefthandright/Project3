@@ -104,3 +104,9 @@ add_to_odd:
 next_char:
   addi $t0, $t0, 1   # Move to next character
   j loop_B
+
+end_B:
+  sub $v0, $t2, $t3  # Calculate result (even sum - odd sum)
+  lw $ra, 0($sp)     # Restore return address
+  addi $sp, $sp, 4   # Restore stack pointer
+  jr $ra             # Return to caller
