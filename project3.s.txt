@@ -82,3 +82,10 @@ subprogram_B:
   li $t2, 0           # Initialize sum of even digits
   li $t3, 0           # Initialize sum of odd digits
 
+loop_B:
+  lb $t1, 0($t0)     # Load byte from substring
+  beq $t1, 0, end_B  # If null terminator, end loop
+
+  lb $t4, N_0        # Load ASCII value of '0' into $t4
+  bge $t1, $t4, is_digit  # Check if character is a digit
+  j next_char        # If not a digit, move to next character
