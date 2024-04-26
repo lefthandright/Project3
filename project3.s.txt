@@ -9,3 +9,9 @@ NA_MESSAGE: .asciiz "N/A"
 NEWLINE: .asciiz "\n"
 SEMICOLON: .asciiz ";"
 N_0: .byte '0'
+
+input_string: .space 1000
+
+# Text segment
+.text
+.globl main
