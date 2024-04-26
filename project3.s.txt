@@ -1,0 +1,5 @@
+# Define constants
+N_VALUE: .word 30
+M_VALUE: .word 116   # ASCII value of 't'
+MAX_INPUT_LENGTH: .word 1000
+
