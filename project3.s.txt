@@ -53,3 +53,8 @@ process_substring:
 
   jal subprogram_B   # Call Subprogram B
   move $s1, $v0      # Save return value
+
+  li $v0, 1
+  bge $s1, 2147483647, print_NA  # Check if return value is 231 - 1
+  move $a0, $s1
+  syscall
