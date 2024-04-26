@@ -70,3 +70,11 @@ end_A:
   lw $ra, 0($sp)     # Restore return address
   addi $sp, $sp, 4   # Restore stack pointer
   jr $ra             # Return to caller
+
+# Subprogram B
+subprogram_B:
+  addi $sp, $sp, -4   # Allocate space for return address
+  sw $ra, 0($sp)      # Save return address
+
+  move $s0, $a0       # Save address of substring
+  move $t0, $a0       # Pointer to beginning of substring
