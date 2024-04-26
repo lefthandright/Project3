@@ -15,3 +15,11 @@ input_string: .space 1000
 # Text segment
 .text
 .globl main
+
+main:
+  # Read string from user input
+  li $v0, 8
+  la $a0, input_string
+  li $a1, 1000
+  syscall
+
