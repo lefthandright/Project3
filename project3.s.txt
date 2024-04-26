@@ -23,3 +23,10 @@ main:
   li $a1, 1000
   syscall
 
+  # Pass address of string to Subprogram A
+  la $a0, input_string
+  jal subprogram_A
+
+  # Exit program
+  li $v0, 10
+  syscall
