@@ -89,3 +89,11 @@ loop_B:
   lb $t4, N_0        # Load ASCII value of '0' into $t4
   bge $t1, $t4, is_digit  # Check if character is a digit
   j next_char        # If not a digit, move to next character
+
+is_digit:
+  sub $t1, $t1, $t4  # Calculate digit value
+
+  andi $t5, $t0, 1   # Check if index is even
+  beq $t5, $zero, add_to_odd
+  add $t2, $t2, $t1  # Add to even sum
+  j next_char
