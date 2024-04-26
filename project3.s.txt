@@ -38,3 +38,11 @@ subprogram_A:
 
   move $s0, $a0       # Save address of string
   move $t0, $a0       # Pointer to beginning of string
+
+loop_A:
+  lb $t1, 0($t0)     # Load byte from string
+  beq $t1, 0, end_A  # If null terminator, end loop
+  beq $t1, ';', process_substring  # If semicolon, process substring
+
+  addi $t0, $t0, 1   # Move to next character
+  j loop_A
