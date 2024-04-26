@@ -3,3 +3,9 @@ N_VALUE: .word 30
 M_VALUE: .word 116   # ASCII value of 't'
 MAX_INPUT_LENGTH: .word 1000
 
+# Data section
+.data
+NA_MESSAGE: .asciiz "N/A"
+NEWLINE: .asciiz "\n"
+SEMICOLON: .asciiz ";"
+N_0: .byte '0'
