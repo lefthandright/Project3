@@ -78,3 +78,7 @@ subprogram_B:
 
   move $s0, $a0       # Save address of substring
   move $t0, $a0       # Pointer to beginning of substring
+
+  li $t2, 0           # Initialize sum of even digits
+  li $t3, 0           # Initialize sum of odd digits
+
